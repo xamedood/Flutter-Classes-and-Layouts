@@ -1,3 +1,4 @@
+import 'package:_firstproject/reels.dart';
 import 'package:_firstproject/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +33,9 @@ class MyApp extends StatelessWidget {
         '/signup': (context) {
           return SignUp();
         },
+        '/reels':(context){
+          return MyReels();
+        }
       },
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -101,7 +105,9 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: false,
         leading: IconButton(
           icon: Icon(Icons.more_horiz_outlined),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed('/reels');
+          },
           color: Colors.black,
         ),
         actions: [
